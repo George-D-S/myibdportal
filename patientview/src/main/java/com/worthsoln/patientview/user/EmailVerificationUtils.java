@@ -55,7 +55,7 @@ public class EmailVerificationUtils {
         emailBody += newLine;
         emailBody += "Click this link to verify:" + newLine;
         emailBody += newLine;
-        emailBody += "https://www.renalpatientview.org/emailverification.do?v=" + emailVerfification.getVerificationcode() + newLine;
+        emailBody += "https://www.myibdportal.com/emailverification.do?v=" + emailVerfification.getVerificationcode() + newLine;
         emailBody += newLine;
         emailBody += newLine;
         emailBody += "------------------------" + newLine;

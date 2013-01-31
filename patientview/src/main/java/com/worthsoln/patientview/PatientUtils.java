@@ -23,6 +23,15 @@ public class PatientUtils {
         return retrievePatient(nhsno, unitcode);
     }
 
+    public static Patient retrieveBestGuessPatient(HttpServletRequest request) {
+        String nhsno = PatientUtils.retrieveNhsNo(request);
+
+        User user = UserUtils.retrieveUser(request);
+        String unitCode = LegacySpringUtils.getUserManager().getUsersRealUnitcodeBestGuess(user.getUsername());
+
+        return retrievePatient(nhsno, unitCode);
+    }
+
     public static Patient retrievePatient(String nhsno, String unitcode) {
         return LegacySpringUtils.getPatientManager().get(nhsno, unitcode);
     }

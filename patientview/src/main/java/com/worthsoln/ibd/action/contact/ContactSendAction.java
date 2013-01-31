@@ -28,7 +28,7 @@ public class ContactSendAction extends BaseAction {
         Integer type = (Integer) dynaForm.get("type");
 
         if (validateMessage(dynaForm)) {
-            Patient patient = PatientUtils.retrievePatient(request);
+            Patient patient = PatientUtils.retrieveBestGuessPatient(request);
 
             if (type == HEALTH_FORM) {
                 sendHealthEmail(request, dynaForm, patient);

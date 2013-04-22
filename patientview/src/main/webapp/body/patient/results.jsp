@@ -29,7 +29,7 @@
 </ul>
 
 <p>
-    Note- You may see test results before the IBD team have had chance to review them. If you have any concerns about the tests, <html:link action="/patient/ibd-contact">please contact us here</html:link> or via the IBD helpline on 0161 20 6423.
+    Note- You may see test results before the IBD team have had chance to review them. If you have any concerns about the tests, <html:link action="/patient/ibd-contact">please contact us here</html:link> or via the IBD helpline on 0161 206 4023.
 </p>
 <h3>Result panels</h3>
 <logic:notEmpty name="results">

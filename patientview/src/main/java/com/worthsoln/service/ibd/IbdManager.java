@@ -89,7 +89,13 @@ public interface IbdManager {
     String getWeight(User user);
     
     Diagnosis getLoggedInUserDiagnosis();
-    
+
+    /**
+     * Returns the diagnosis. If there is none, a new one is created and that is returned
+     *
+     * @param user
+     * @return a diagnosis object
+     */
     Diagnosis getDiagnosis(User user);
 
     void saveProcedure(Procedure procedure);

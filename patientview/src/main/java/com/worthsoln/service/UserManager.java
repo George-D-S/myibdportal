@@ -57,7 +57,11 @@ public interface UserManager {
 
     String getUsersRealUnitcodeBestGuess(String username);
 
+    String getUsersRealUnitcodeBestGuess(String username, Tenancy tenancy);
+
     String getUsersRealNhsNoBestGuess(String username);
+
+    String getUsersRealNhsNoBestGuess(String username, Tenancy tenancy);
 
     UserMapping getUserMappingPatientEntered(User user);
 

@@ -15,6 +15,7 @@ public class AddLog {
     public static final String PATIENT_DATA_FAIL = "patient data fail";
     public static final String PATIENT_DATA_REMOVE = "patient data remove";
     public static final String LOGGED_ON = "logon";
+    public static final String LOGGED_OUT = "logout";
     public static final String PATIENT_ADD = "patient add";
     public static final String PATIENT_DELETE = "patient delete";
     public static final String PATIENT_VIEW = "patient view";

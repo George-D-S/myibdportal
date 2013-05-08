@@ -13,6 +13,7 @@ import com.worthsoln.actionutils.ActionUtils;
  *
  *      Assuming this setUpNavLink() is redundant now.
  */
+@Deprecated
 public class LogoutAction extends Action {
 
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,

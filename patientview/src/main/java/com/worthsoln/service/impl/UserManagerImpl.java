@@ -248,13 +248,23 @@ public class UserManagerImpl implements UserManager {
 
     @Override
     public String getUsersRealUnitcodeBestGuess(String username) {
-        return userMappingDao.getUsersRealUnitcodeBestGuess(username, securityUserManager.getLoggedInTenancy());
+        return getUsersRealUnitcodeBestGuess(username, securityUserManager.getLoggedInTenancy());
+    }
+
+    @Override
+    public String getUsersRealUnitcodeBestGuess(String username, Tenancy tenancy) {
+        return userMappingDao.getUsersRealUnitcodeBestGuess(username, tenancy);
     }
 
     @Override
     public String getUsersRealNhsNoBestGuess(String username) {
-        return userMappingDao.getUsersRealNhsNoBestGuess(username, securityUserManager.getLoggedInTenancy());
+        return getUsersRealNhsNoBestGuess(username, securityUserManager.getLoggedInTenancy());
     }
+    @Override
+    public String getUsersRealNhsNoBestGuess(String username, Tenancy tenancy) {
+        return userMappingDao.getUsersRealNhsNoBestGuess(username, tenancy);
+    }
+
 
     @Override
     public UserMapping getUserMappingPatientEntered(User user) {

@@ -1,6 +1,7 @@
 package com.worthsoln.patientview.model;
 
 import com.worthsoln.utils.LegacySpringUtils;
+import org.apache.commons.lang.StringUtils;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -54,6 +55,22 @@ public class User extends BaseModel {
     // get the user's role in the currently selected tenancy
     public String getRole() {
         return LegacySpringUtils.getUserManager().getCurrentTenancyRole(this);
+    }
+
+    @Transient
+    // get the user's first name from the name string, handles the case where name is like "joe ross chenery"
+    public String getFirstName() {
+        String firstName = "";
+
+        if (StringUtils.isNotBlank(name)) {
+            String[] names = name.split(" ");
+
+            if (names.length > 0) {
+                firstName = names[0];
+            }
+        }
+
+        return firstName;
     }
 
     public String getName() {

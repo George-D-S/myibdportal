@@ -1,4 +1,5 @@
 <%@ page import="com.worthsoln.utils.LegacySpringUtils" %>
+<%@ page import="com.worthsoln.patientview.model.User" %>
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
@@ -16,7 +17,12 @@
 </logic:present>
 
 <div class="page-header">
-    <h1>Welcome <%= LegacySpringUtils.getSecurityUserManager().getLoggedInUsername()%>, you have logged in successfully</h1>
+    <%
+        String username = LegacySpringUtils.getSecurityUserManager().getLoggedInUsername();
+        User user = LegacySpringUtils.getUserManager().get(username);
+    %>
+
+    <h1>Welcome <%= user.getFirstName()%>, you have logged in successfully</h1>
 </div>
 
 <div class="alert alert-info"><b>This is a confidential record.</b> If you should not be reading it please <html:link action="logout">log out</html:link> now.</div>

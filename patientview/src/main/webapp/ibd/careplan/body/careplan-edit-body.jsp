@@ -402,6 +402,7 @@
 
                 <div class="form-actions">
                     <html:submit value="Save" styleClass="btn btn-primary"/>
+                    <input type="button" class="btn" onclick="window.print()" value="Print"/>
                 </div>
             </fieldset>
         </html:form>

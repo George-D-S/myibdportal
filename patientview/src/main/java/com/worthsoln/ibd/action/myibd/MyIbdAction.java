@@ -3,6 +3,7 @@ package com.worthsoln.ibd.action.myibd;
 import com.worthsoln.actionutils.ActionUtils;
 import com.worthsoln.ibd.Ibd;
 import com.worthsoln.ibd.action.BaseAction;
+import com.worthsoln.ibd.model.Allergy;
 import com.worthsoln.ibd.model.MyIbd;
 import com.worthsoln.ibd.model.medication.MyMedication;
 import com.worthsoln.patientview.model.User;
@@ -24,20 +25,36 @@ public class MyIbdAction extends BaseAction {
 
         User user = UserUtils.retrieveUser(request);
 
+        /**
+         * My Ibd
+         */
         MyIbd myIbd = getIbdManager().getMyIbd(user);
 
         if (myIbd != null) {
             request.setAttribute(Ibd.MY_IBD_PARAM, myIbd);
         }
 
-        // get the patients latest weight from the test results
+        /**
+         * Allergies
+         */
+        List<Allergy> allergies = getIbdManager().getAllergies(myIbd.getNhsno());
+
+        if (allergies != null && allergies.size() > 0) {
+            request.setAttribute(Ibd.PATIENT_ALLERGIES_PARAM, allergies);
+        }
+
+        /**
+         *  Get the patients latest weight from the test results
+         */
         String weight = getIbdManager().getWeight(user);
 
         if (weight != null) {
             request.setAttribute(Ibd.WEIGHT_PARAM, weight);
         }
 
-        // get list of medications for user
+        /**
+         * Get list of medications for user
+         */
         List<MyMedication> currentMedications = getIbdManager().getCurrentMedications(user);
 
         if (currentMedications != null && !currentMedications.isEmpty()) {

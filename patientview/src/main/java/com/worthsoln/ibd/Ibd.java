@@ -17,6 +17,7 @@ public class Ibd {
     public static final String CURRENT_MEDICATIONS_PARAM = "currentMedications";
     public static final String STOPPED_MEDICATIONS_PARAM = "stoppedMedications";
     public static final String UNIT_CODE_PARAM = "unitcode";
+    public static final String PATIENT_ALLERGIES_PARAM = "patientAllergies";
 
     public static final String CROHNS_DIAGRAM = "crohns.jpg";
     public static final String COLITIS_UNSPECIFIED_DIAGRAM = "colitis-unspecified.jpg";

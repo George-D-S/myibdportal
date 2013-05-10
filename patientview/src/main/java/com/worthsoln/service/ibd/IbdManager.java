@@ -104,6 +104,6 @@ public interface IbdManager {
 
     void saveAllergy(Allergy allergy);
 
-    Allergy getAllergy(String nhsno);
+    List<Allergy> getAllergies(String nhsno);
 
 }

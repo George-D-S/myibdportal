@@ -181,7 +181,7 @@ public class ImporterTest extends BaseServiceTest {
         Procedure procedure = ibdManager.getProcedure("9876543210");
         assertNotNull("No procedure information was parsed", procedure);
 
-        Allergy allergy = ibdManager.getAllergy("9876543210");
-        assertNotNull("No allergy information was parsed", allergy);
+        List<Allergy> allergies = ibdManager.getAllergies("9876543210");
+        assertTrue("No allergy information was parsed", allergies.size() > 0);
     }
 }

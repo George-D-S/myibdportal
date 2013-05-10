@@ -9,23 +9,19 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import java.util.List;
 
 @Repository(value = "allergyDao")
 public class AllergyDaoImpl extends AbstractHibernateDAO<Allergy> implements AllergyDao {
 
     @Override
-    public Allergy getAllergy(String nhsno) {
+    public List<Allergy> getAllergies(String nhsno) {
         CriteriaBuilder builder = getEntityManager().getCriteriaBuilder();
         CriteriaQuery<Allergy> criteria = builder.createQuery(Allergy.class);
         Root<Allergy> allergyRoot = criteria.from(Allergy.class);
 
         criteria.where(builder.equal(allergyRoot.get(Allergy_.nhsno), nhsno));
 
-        try {
-            return getEntityManager().createQuery(criteria).getSingleResult();
-        } catch (Exception e) {
-            return null;
-        }
+        return getEntityManager().createQuery(criteria).getResultList();
     }
-
 }

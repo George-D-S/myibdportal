@@ -1,6 +1,7 @@
 package com.worthsoln.repository.ibd;
 
 import com.worthsoln.ibd.model.Allergy;
+import java.util.List;
 
 public interface AllergyDao {
 
@@ -8,6 +9,6 @@ public interface AllergyDao {
 
     void save(Allergy allergy);
 
-    Allergy getAllergy(String nhsno);
+    List<Allergy> getAllergies(String nhsno);
 
 }

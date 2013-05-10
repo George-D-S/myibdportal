@@ -18,6 +18,7 @@ public class ContactSendAction extends BaseAction {
     private static final int OTHER_FORM = 2;
 
     private static final String HEALTH_FORM_EMAIL = "myibdhealth@srft.nhs.uk";
+    private static final String HEALTH_FORM_CC_EMAIL = "ibd@srft.nhs.uk";
     private static final String OTHER_FORM_EMAIL = "myibdportal@srft.nhs.uk";
 
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
@@ -53,7 +54,8 @@ public class ContactSendAction extends BaseAction {
     }
 
     private void sendHealthEmail(HttpServletRequest request, DynaActionForm form,Patient patient) {
-        sendEmail(request, HEALTH_FORM_EMAIL, "IBD Question about health", createMessage(patient, form));
+        EmailUtils.sendEmail(request.getSession().getServletContext(), HEALTH_FORM_EMAIL, HEALTH_FORM_EMAIL,
+                HEALTH_FORM_CC_EMAIL, "IBD Question about health", createMessage(patient, form));
     }
 
     private void sendOtherEmail(HttpServletRequest request, DynaActionForm form, Patient patient) {

@@ -42,7 +42,9 @@
                 </div>
 
                 <div class="span3 controls">
-                    <bean:write name="myIbd" property="diseaseExtent.name"/>
+                    <logic:present name="diseaseExtent">
+                        <bean:write name="myIbd" property="diseaseExtent.name"/>
+                    </logic:present>
 
                     <logic:present name="diseaseExtentLink">
                         <a href="<bean:write name="diseaseExtentLink"/>" target="_blank"><i class="icon-info-sign"></i></a>
@@ -56,7 +58,9 @@
                 </div>
 
                 <div class="span3 controls">
-                    <bean:write name="myIbd" property="yearOfDiagnosisAsString"/>
+                    <logic:present name="diseaseExtent">
+                        <bean:write name="myIbd" property="yearOfDiagnosisAsString"/>
+                    </logic:present>
 
                     <logic:present name="yearOfDiagnosisLink">
                         <a href="<bean:write name="yearOfDiagnosisLink"/>" target="_blank"><i class="icon-info-sign"></i></a>
@@ -178,6 +182,33 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="span3 control-label">
+                     Allergies:
+                </div>
+                <div class="span9">
+                    <logic:present name="patientAllergies">
+                        <table class="table table-bordered table-striped">
+                            <tbody>
+                            <logic:iterate name="patientAllergies" id="myAllergy" indexId="index">
+                                <tr>
+                                    <td>
+                                        Allergies record
+                                    </td>
+                                    <td>
+                                        <pre><bean:write name="myAllergy" property="substance" /></pre>
+                                    </td>
+                                </tr>
+                            </logic:iterate>
+                            </tbody>
+                        </table>
+                    </logic:present>
+                    <logic:notPresent name="patientAllergies">
+                        <p>No allergies</p>
+                    </logic:notPresent>
+                </div>
+            </div>
+
             <div class="row control-group">
                 <div class="span3">
                     <label class="control-label">Vaccination Record:</label>
@@ -242,13 +273,15 @@
 
         <div class="span6">
             <logic:present name="myIbd" property="diagnosis">
-                <div class="medicalDiagram">
-                    <img src="ibd/img/content/<bean:write name="myIbd" property="diseaseExtent.diagram"/>" alt="<bean:write name="myIbd" property="diseaseExtent.name"/>"/>
-                    <dl class="medicalDiagramKey span4 pull-right">
-                        <dt class="redKeyItem keyItem">Red</dt>
-                        <dd class="span3">represents the part of the bowel affected by your condition.</dd>
-                    </dl>
-                </div>
+                <logic:present name="myIbd" property="diseaseExtent">
+                    <div class="medicalDiagram">
+                        <img src="ibd/img/content/<bean:write name="myIbd" property="diseaseExtent.diagram"/>" alt="<bean:write name="myIbd" property="diseaseExtent.name"/>"/>
+                        <dl class="medicalDiagramKey span4 pull-right">
+                            <dt class="redKeyItem keyItem">Red</dt>
+                            <dd class="span3">represents the part of the bowel affected by your condition.</dd>
+                        </dl>
+                    </div>
+                </logic:present>
             </logic:present>
         </div>
     </div>

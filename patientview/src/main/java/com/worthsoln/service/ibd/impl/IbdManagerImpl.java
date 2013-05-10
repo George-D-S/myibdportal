@@ -378,7 +378,7 @@ public class IbdManagerImpl implements IbdManager {
     }
 
     @Override
-    public Allergy getAllergy(String nhsno) {
-        return allergyDao.getAllergy(nhsno);
+    public List<Allergy> getAllergies(String nhsno) {
+        return allergyDao.getAllergies(nhsno);
     }
 }

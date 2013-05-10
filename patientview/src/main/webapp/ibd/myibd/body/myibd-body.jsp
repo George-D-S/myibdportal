@@ -195,9 +195,7 @@
                                     <td>
                                         Allergies record
                                     </td>
-                                    <td>
-                                        <pre><bean:write name="myAllergy" property="substance" /></pre>
-                                    </td>
+                                    <td class="raw-data"><bean:write name="myAllergy" property="substance" /></td>
                                 </tr>
                             </logic:iterate>
                             </tbody>

@@ -62,7 +62,7 @@
         <profile>
             <id>staging-ibd</id>
             <properties>
-                <env>staging</env>
+                <env>staging-ibd</env>
                 <tomcatmanagerurl>http://ibd.staging.solidstategroup.com/manager/text</tomcatmanagerurl>
                 <warpath>/</warpath>
                 <profile.build.output-webapp-dir>${project.build.directory}/${project.build.finalName}</profile.build.output-webapp-dir>

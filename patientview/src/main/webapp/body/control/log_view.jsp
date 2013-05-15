@@ -45,6 +45,7 @@
           <html:option value="patient data fail"/>
           <html:option value="patient data remove"/>
           <html:option value="logon"/>
+          <html:option value="logout"/>
           <html:option value="patient add"/>
           <html:option value="patient delete"/>
           <html:option value="patient view"/>

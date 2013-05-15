@@ -26,7 +26,13 @@
                             <li>
                                 My IBD Tracker&copy; shows the common topics that can cause difficulties in living with
                                 IBD. Move the tracker to show how much each area is a concern and where you may need
-                                more help at your next appointment. For further resources click on the <i class="icon-info-sign"></i> links.
+                                more help at your next appointment. For further resources click on the
+                                <i class="icon-info-sign"></i> links.
+                            </li>
+                            <li>
+                                Please ask your IBD Nurse or Doctor to review your online Care Plan with you in clinic
+                                on the computer. If you would prefer, you can print your Care Plan and bring it with
+                                you to your appointment. Please click this link <input type="button" class="btn" onclick="window.print()" value="Print"/>
                             </li>
                         </ul>
 

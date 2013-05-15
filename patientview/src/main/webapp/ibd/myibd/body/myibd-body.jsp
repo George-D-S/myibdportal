@@ -151,7 +151,7 @@
 
                 <div class="span3 controls">
                     <logic:present name="myIbd" property="surgery">
-                        <bean:write name="myIbd" property="surgery"/>
+                        <span class="raw-data"><bean:write name="myIbd" property="surgery"/></span>
                     </logic:present>
                     <logic:notPresent name="myIbd" property="surgery">
                         No previous operations
@@ -182,27 +182,23 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="span3 control-label">
-                     Allergies:
+            <div class="row control-group">
+                <div class="span3">
+                    <div class="control-label">
+                        Allergies:
+                    </div>
                 </div>
-                <div class="span9">
+                <div class="span3 controls">
                     <logic:present name="patientAllergies">
-                        <table class="table table-bordered table-striped">
-                            <tbody>
+
                             <logic:iterate name="patientAllergies" id="myAllergy" indexId="index">
-                                <tr>
-                                    <td>
-                                        Allergies record
-                                    </td>
-                                    <td class="raw-data"><bean:write name="myAllergy" property="substance" /></td>
-                                </tr>
+
+                                    <div class="raw-data"><bean:write name="myAllergy" property="substance" /></div>
                             </logic:iterate>
-                            </tbody>
-                        </table>
+
                     </logic:present>
                     <logic:notPresent name="patientAllergies">
-                        <p>No allergies</p>
+                        <div>No allergies</div>
                     </logic:notPresent>
                 </div>
             </div>

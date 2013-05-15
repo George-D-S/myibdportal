@@ -42,17 +42,9 @@
     <div class="span4 seperatingBorders">
         <h3 class="mediumBlueTitle titleSeperator">Further Information</h3>
         <ul class="linkList">
+            <li><a href="/ibd/ibd-help.do" class="readMoreParagraph">&raquo; Help</a></li>
             <li>
-                <a target="_blank" href="http://www.srft.nhs.uk/for-patients/outpatient-information/" class="readMoreParagraph">&raquo; Outpatient Information</a>
-                <p>
-                    Useful information about your visit to SRFT.
-                </p>
-            </li>
-            <li>
-                <a target="_blank" href="http://www.srft.nhs.uk/useful-information/how-to-get-to-the-hospital/" class="readMoreParagraph">&raquo; Useful Information about SRFT</a>
-                <p>
-                    This link provides a link to maps, contact numbers, parking and visiting times.
-                </p>
+                <a target="_blank" href="http://myibdportal.org" class="readMoreParagraph">&raquo; My IBD Portal Information Site</a>
             </li>
             <li>
                 <a target="_blank" href="http://www.nhs.uk/conditions/ulcerative-colitis/pages/introduction.aspx" class="readMoreParagraph">&raquo; NHS Choices- Ulcerative Colitis</a>
@@ -64,7 +56,16 @@
                 <a target="_blank" href="http://www.nhs.uk/ipg/Pages/IPStart.aspx" class="readMoreParagraph">&raquo; Information Prescription Service</a>
             </li>
             <li>
-                <a target="_blank" href="http://myibdportal.org" class="readMoreParagraph">&raquo; My IBD Portal Information Site</a>
+                <a target="_blank" href="http://www.srft.nhs.uk/for-patients/outpatient-information/" class="readMoreParagraph">&raquo; Outpatient Information</a>
+                <p>
+                    Useful information about your visit to SRFT.
+                </p>
+            </li>
+            <li>
+                <a target="_blank" href="http://www.srft.nhs.uk/useful-information/how-to-get-to-the-hospital/" class="readMoreParagraph">&raquo; Useful Information about SRFT</a>
+                <p>
+                    This link provides a link to maps, contact numbers, parking and visiting times.
+                </p>
             </li>
         </ul>
     </div>

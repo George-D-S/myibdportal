@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="span3 controls">
-                    <logic:present name="diseaseExtent">
+                    <logic:present name="myIbd" property="diseaseExtent">
                         <bean:write name="myIbd" property="diseaseExtent.name"/>
                     </logic:present>
 
@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="span3 controls">
-                    <logic:present name="diseaseExtent">
+                    <logic:present name="myIbd" property="yearOfDiagnosisAsString">
                         <bean:write name="myIbd" property="yearOfDiagnosisAsString"/>
                     </logic:present>
 

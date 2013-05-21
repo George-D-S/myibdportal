@@ -19,7 +19,7 @@ import java.util.List;
 public class MyIbdAction extends BaseAction {
 
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
-                                     HttpServletResponse response) throws Exception {
+                                 HttpServletResponse response) throws Exception {
         // set current nav
         ActionUtils.setUpNavLink(mapping.getParameter(), request);
 
@@ -32,15 +32,15 @@ public class MyIbdAction extends BaseAction {
 
         if (myIbd != null) {
             request.setAttribute(Ibd.MY_IBD_PARAM, myIbd);
-        }
 
-        /**
-         * Allergies
-         */
-        List<Allergy> allergies = getIbdManager().getAllergies(myIbd.getNhsno());
+            /**
+             * Allergies
+             */
+            List<Allergy> allergies = getIbdManager().getAllergies(myIbd.getNhsno());
 
-        if (allergies != null && allergies.size() > 0) {
-            request.setAttribute(Ibd.PATIENT_ALLERGIES_PARAM, allergies);
+            if (allergies != null && allergies.size() > 0) {
+                request.setAttribute(Ibd.PATIENT_ALLERGIES_PARAM, allergies);
+            }
         }
 
         /**

@@ -253,7 +253,7 @@ public class ResultParser {
                     Node allergyDetailNode = allergyDetailNodes.item(j);
                     if ((allergyDetailNode.getNodeType() == Node.ELEMENT_NODE) &&
                             (allergyDetailNode.getNodeName().equals("allergysubstance"))) {
-                        allergy.setSubstance(allergyNode.getFirstChild().getNodeValue());
+                        allergy.setSubstance(allergyDetailNode.getFirstChild().getNodeValue());
                     } else if ((allergyDetailNode.getNodeType() == Node.ELEMENT_NODE) &&
                             (allergyDetailNode.getNodeName().equals("allergytypecode"))) {
                         allergy.setTypeCode(allergyDetailNode.getFirstChild().getNodeValue());
@@ -273,7 +273,7 @@ public class ResultParser {
                             (allergyDetailNode.getNodeName().equals("allergydescription"))) {
                         allergy.setDescription(allergyDetailNode.getFirstChild().getNodeValue());
                     } else if ((allergyDetailNode.getNodeType() == Node.ELEMENT_NODE) &&
-                            (allergyDetailNode.getNodeName().equals("allergyrecordeddate"))) {
+                            (allergyDetailNode.getNodeName().equals("allergyentereddate"))) {
                         allergy.setRecordedDate(allergyDetailNode.getFirstChild().getNodeValue());
                     }
                 } catch (NullPointerException e) {

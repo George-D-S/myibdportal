@@ -42,7 +42,7 @@
     <div class="span4 seperatingBorders">
         <h3 class="mediumBlueTitle titleSeperator">Further Information</h3>
         <ul class="linkList">
-            <li><a href="/ibd/ibd-help.do" class="readMoreParagraph">&raquo; Help</a></li>
+            <li><a href="/ibd-help.do" class="readMoreParagraph">&raquo; Help</a></li>
             <li>
                 <a target="_blank" href="http://myibdportal.org" class="readMoreParagraph">&raquo; My IBD Portal Information Site</a>
             </li>

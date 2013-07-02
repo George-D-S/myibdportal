@@ -128,13 +128,14 @@
         </procedures>
         <allergydetails>
             <allergy>
-                <allergysubstance>allergysubstance</allergysubstance>
-                <allergytypecode>allergytypecode</allergytypecode>
-                <allergyreaction>allergyreaction</allergyreaction>
-                <allergyconfidencelevel>allergyconfidencelevel</allergyconfidencelevel>
-                <allergyinfosource>allergyinfosource</allergyinfosource>
-                <allergystatus>allergystatus</allergystatus>
-                <allergydescription>allergydescription</allergydescription>
+                <allergysubstance>Neomycin</allergysubstance>
+                <allergytypecode>Drug</allergytypecode>
+                <allergyreaction>Other</allergyreaction>
+                <allergyconfidencelevel></allergyconfidencelevel>
+                <allergyinfosource>Patient</allergyinfosource>
+                <allergystatus>Active</allergystatus>
+                <allergydescription></allergydescription>
+                <allergyentereddate>2010-02-19</allergyentereddate>
             </allergy>
         </allergydetails>
     </patient>

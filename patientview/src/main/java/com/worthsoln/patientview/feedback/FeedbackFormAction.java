@@ -66,13 +66,13 @@ public class FeedbackFormAction extends DatabaseAction {
         String fromAddress = context.getInitParameter("noreply.email");
         Unit unit = UnitUtils.retrieveUnit(feedback.getUnitcode());
         String toAddress = unit.getRpvadminemail();
-        String subject = "[Renal PatientView] New feedback for your unit - " + unit.getShortname();
+        String subject = "[My IBD Portal] New feedback for your unit - " + unit.getShortname();
 
         String newLine = System.getProperty("line.separator");
         String emailBody = "";
-        emailBody += "[This is an automated email from Renal PatientView - do not reply to this email]" + newLine;
+        emailBody += "[This is an automated email from My IBD Portal - do not reply to this email]" + newLine;
         emailBody += newLine;
-        emailBody += "A patient has posted some feedback about " + unit.getShortname() + ". Please login to Renal PatientView to see the feedback in full and approve it for viewing by other patients." + newLine;
+        emailBody += "A patient has posted some feedback about " + unit.getShortname() + ". Please login to My IBD Portal to see the feedback in full and approve it for viewing by other patients." + newLine;
         emailBody += newLine;
         emailBody += "The comment is as follows:" + newLine;
         emailBody += newLine;
@@ -91,7 +91,7 @@ public class FeedbackFormAction extends DatabaseAction {
         emailBody += newLine;
         emailBody += "------------------------" + newLine;
         emailBody += newLine;
-        emailBody += "Please note that Renal PatientView will never send you an email with link to click to ask you to log in to do anything. If you ever get an email like that, please let us know, because it it probably some kind of scam or phishing attempt." + newLine;
+        emailBody += "Please note that My IBD Portal will never send you an email with link to click to ask you to log in to do anything. If you ever get an email like that, please let us know, because it it probably some kind of scam or phishing attempt." + newLine;
 
         EmailUtils.sendEmail(context, fromAddress, toAddress, subject, emailBody);
     }

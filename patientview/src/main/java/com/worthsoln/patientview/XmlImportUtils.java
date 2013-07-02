@@ -38,7 +38,7 @@ public class XmlImportUtils {
         String newLine = System.getProperty("line.separator");
 
         String emailBody = "";
-        emailBody += "[This is an automated email from Renal PatientView - do not reply to this email]";
+        emailBody += "[This is an automated email from My IBD Portal - do not reply to this email]";
         emailBody += newLine;
         emailBody += newLine + "The file named: ";
         emailBody += newLine;

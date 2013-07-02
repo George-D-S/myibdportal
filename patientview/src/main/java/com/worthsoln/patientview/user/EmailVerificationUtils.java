@@ -41,9 +41,9 @@ public class EmailVerificationUtils {
         String newLine = System.getProperty("line.separator");
 
         String emailBody = "";
-        emailBody += "[This is an automated email from Renal PatientView - do not reply to this email]" + newLine;
+        emailBody += "[This is an automated email from My IBD Portal- do not reply to this email]" + newLine;
         emailBody += newLine;
-        emailBody += "Either you have requested that your email be verified or you have recently been added to Renal PatientView with an email address and it needs to be verified." + newLine;
+        emailBody += "Either you have requested that your email be verified or you have recently been added to My IBD Portal with an email address and it needs to be verified." + newLine;
         emailBody += newLine;
         emailBody += "This is simply so we can be sure that your email address is correct." + newLine;
         emailBody += newLine;
@@ -60,8 +60,8 @@ public class EmailVerificationUtils {
         emailBody += newLine;
         emailBody += "------------------------" + newLine;
         emailBody += newLine;
-        emailBody += "Please note that Renal PatientView will never send you an email with link to click to ask you to log in to do anything. If you ever get an email like that, please let us know, because it it probably some kind of scam or phishing attempt." + newLine;
+        emailBody += "Please note that My IBD Portal will never send you an email with link to click to ask you to log in to do anything. If you ever get an email like that, please let us know, because it it probably some kind of scam or phishing attempt." + newLine;
 
-        EmailUtils.sendEmail(context, context.getInitParameter("noreply.email"), emailVerfification.getEmail(), "[Renal PatientView] Verify email address", emailBody);
+        EmailUtils.sendEmail(context, context.getInitParameter("noreply.email"), emailVerfification.getEmail(), "[My IBD Portal] Verify email address", emailBody);
     }
 }
